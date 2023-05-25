@@ -1,14 +1,26 @@
-sql_endpoints:
+snowflake:
   target: dev
   outputs:
-    # Use this if connecting to a hosted spark (e.g. Databricks)
     dev:
-      type: databricks
-      method: http
-      catalog: hive_metastore
-      schema: insertschemahere
-      threads: 10
-      host: "{{ env_var('DBT_DATABRICKS_HOST') }}"
-      token: "{{ env_var('DBT_DATABRICKS_TOKEN') }}"
-      http_path: "{{ env_var('DBT_DATABRICKS_HTTP_PATH') }}
+      type: snowflake
+      account: accounthere
+
+      # User/password auth
+      user: unhere
+      password: pwhere
+
+      role: "ACCOUNTADMIN"
+      database: "db" # Replace string after "_" with appropriate scale factor (i.e. sf10, sf100, sf1000)
+      warehouse: "wh" # Create this warehouse in Snowflake before running dbt build
+      schema: "schema"
+      threads: 25
+      client_session_keep_alive: False
+      query_tag: "tpcdi_sf100_run_1"
+
+      # optional
+      connect_retries: 0 # default 0
+      connect_timeout: 10 # default: 10
+      retry_on_database_errors: False # default: false
+      retry_all: False  # default: false
+      reuse_connections: False # default: false (available v1.4+)
       
