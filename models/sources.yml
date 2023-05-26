@@ -735,43 +735,51 @@ sources:
           - name: calendarqtrdesc
             data_type: string
             description: "abc"
-            index: c7 
-          - name: calendarweekid
+            index: c7
+          - name: calendarmonthid
             data_type: int
             description: "abc"
             index: c8
-          - name: calendarweekdesc
+          - name: calendarmonthdesc
             data_type: string
             description: "abc"
-            index: c9
-          - name: dayofweeknum
+            index: c9    
+          - name: calendarweekid
             data_type: int
             description: "abc"
             index: c10
-          - name: dayofweekdesc
+          - name: calendarweekdesc
             data_type: string
             description: "abc"
             index: c11
+          - name: dayofweeknum
+            data_type: int
+            description: "abc"
+            index: c12
+          - name: dayofweekdesc
+            data_type: string
+            description: "abc"
+            index: c13
           - name: fiscalyearid
             data_type: int
             description: "abc"
-            index: c12 
+            index: c14 
           - name: fiscalyeardesc
             data_type: string
             description: "abc"
-            index: c13 
+            index: c15 
           - name: fiscalqtrid
             data_type: int
             description: "abc"
-            index: c14
+            index: c16
           - name: fiscalqtrdesc
             data_type: string
             description: "abc"
-            index: c15 
+            index: c17 
           - name: holidayflag
             data_type: boolean
             description: "abc"
-            index: c16  
+            index: c18  
 
       - name: HR
         external:
@@ -1597,5 +1605,3 @@ sources:
             data_type: int
             description: "abc"
             index: c22 
-
-            
