@@ -704,7 +704,7 @@ sources:
       - name: DimDate
         external:
           location: "@tpcdi_sf10000_raw/Batch1"
-          pattern: '.*Date[.]txt' 
+          pattern: '.*[/]Date[.]txt' 
           file_format: "( format_name = 'TXT_PIPE')"
 
         columns:
