@@ -1,6 +1,6 @@
 # DBTPCDI
 
-This repo is an end to end implementation of tpcdi using dbt and databricks. Assuming dbt is installed, here is four step process to get repo up and running! 
+This repo is an end to end implementation of tpcdi using dbt and snowflake. Assuming dbt is installed, here is four step process to get repo up and running! 
 
 Pre-reqs
 This assumes that you have a stage created to read files from and that you have created the apporpriate file formats. Also assumes that the xml table already exists and catalog.schema.table is hard coded in base/customermgmtview.sql
