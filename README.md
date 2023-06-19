@@ -8,3 +8,4 @@ iii) Update project.yml with the benchmark you want to run \
 iv) dbt deps \
 v) dbt run-operation stage_external_sources \
 vi) dbt run
+
