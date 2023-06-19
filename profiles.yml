@@ -1,14 +1,23 @@
-sql_endpoints:
-  target: dev
+dbsql_dbt_tpch:
   outputs:
-    # Use this if connecting to a hosted spark (e.g. Databricks)
     dev:
-      type: databricks
-      method: http
-      catalog: hive_metastore
-      schema: insertschemahere
+      catalog: main
+      host: dbc-c4466db9-3ef7.cloud.databricks.com
+      http_path: /sql/1.0/warehouses/b7f1482642149ac0
+      schema: tpcdi_dbt
       threads: 25
-      host: "{{ env_var('DBT_DATABRICKS_HOST') }}"
-      token: "{{ env_var('DBT_DATABRICKS_TOKEN') }}"
-      http_path: "{{ env_var('DBT_DATABRICKS_HTTP_PATH') }}
-      
+      token: dapi6e910fb43183a48ab0b24c950b830827
+      type: databricks
+  target: dev
+sql_endpoints:
+  outputs:
+    dev:
+      catalog: main
+      host: dbc-c4466db9-3ef7.cloud.databricks.com
+      http_path: /sql/1.0/warehouses/b7f1482642149ac0
+      method: http
+      schema: tpcdi
+      threads: 25
+      token: dapi6e910fb43183a48ab0b24c950b830827
+      type: databricks
+  target: dev
